@@ -8,7 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.GridLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -17,12 +21,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 
 public class CalendarActivity extends AppCompatActivity {
 
     private CalendarDatabaseHelper db;
     private EditText text;
+    private TextView textView;
     private CalendarView calendar;
     private String selectDate;
     private SQLiteDatabase sqLiteDatabase;
@@ -36,6 +46,7 @@ public class CalendarActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             text = findViewById(R.id.editTextEvent);
+            textView = findViewById(R.id.textViewEvent);
             calendar = findViewById(R.id.calendarView);
             ImageButton journal = findViewById(R.id.imageEntry);
             ImageButton mood = findViewById(R.id.imageMood);
@@ -56,7 +67,6 @@ public class CalendarActivity extends AppCompatActivity {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-
             journal.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -98,19 +108,23 @@ public class CalendarActivity extends AppCompatActivity {
             sqLiteDatabase.insert("EventCalendar", null, cv);
         }
         Toast.makeText(this, "Saved successfully.", Toast.LENGTH_SHORT).show();
+        text.setText("");
+        ReadEvent(view);
     }
 
     public void ReadEvent(View view) {
         String query = "Select Event from EventCalendar where Date = ?";
         try (Cursor cursor = sqLiteDatabase.rawQuery(query, new String[]{selectDate})) {
             if (cursor.moveToFirst()) {
-                text.setText(cursor.getString(0));
+                textView.setText(cursor.getString(0));
             } else {
-                text.setText("");
+                textView.setText("");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-            text.setText("");
+            textView.setText("");
         }
+        text.setText("");
     }
+
 }

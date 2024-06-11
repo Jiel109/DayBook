@@ -64,8 +64,23 @@
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#EDACAC"
+        android:theme="@style/CalenderViewCustom"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="45dp"/>
+        android:layout_marginEnd="40dp"/>
+
+    <TextView
+        android:id="@+id/textViewEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDACAC"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="" />
 
     <EditText
         android:id="@+id/editTextEvent"
@@ -91,11 +106,12 @@
         android:onClick="AddEvent"
         android:text="Save"
         android:textColor="@color/white"
-        app:cornerRadius="10dp" />
+        app:cornerRadius="10dp"
+        tools:ignore="HardcodedText" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginTop="167dp"
         android:background="#EDACAC"
