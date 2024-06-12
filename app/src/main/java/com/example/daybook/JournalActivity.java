@@ -51,7 +51,7 @@ public class JournalActivity extends AppCompatActivity {
             });
 
             loadNotesFromPreferences();
-            displayNotes();
+            refreshNoteViews();
 
             mood.setOnClickListener(new View.OnClickListener() {
                 @Override
