@@ -34,7 +34,7 @@ public class MoodActivity extends AppCompatActivity {
             ImageButton journal = findViewById(R.id.imageEntry);
             ImageButton toDo = findViewById(R.id.imageToDo);
             ImageButton calendar = findViewById(R.id.imageCalendar);
-            ImageButton settings = findViewById(R.id.imageSettings);
+            ImageButton credits = findViewById(R.id.imageCredits);
             mood = findViewById(R.id.textViewMoodDisplay);
             imageMood = findViewById(R.id.imageViewMood);
             spinnerMood = findViewById(R.id.spinnerMood);
@@ -87,10 +87,10 @@ public class MoodActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            settings.setOnClickListener(new View.OnClickListener() {
+            credits.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MoodActivity.this, SettingsActivity.class);
+                    Intent intent = new Intent(MoodActivity.this, CreditsActivity.class);
                     startActivity(intent);
                 }
             });

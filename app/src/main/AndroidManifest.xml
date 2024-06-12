@@ -16,7 +16,7 @@
             android:name=".ToDoActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".CreditsActivity"
             android:exported="false" />
         <activity
             android:name=".CalendarActivity"

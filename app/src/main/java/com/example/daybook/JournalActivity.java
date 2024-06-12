@@ -39,7 +39,7 @@ public class JournalActivity extends AppCompatActivity {
             ImageButton mood = findViewById(R.id.imageMood);
             ImageButton toDo = findViewById(R.id.imageToDo);
             ImageButton calendar = findViewById(R.id.imageCalendar);
-            ImageButton settings = findViewById(R.id.imageSettings);
+            ImageButton credits = findViewById(R.id.imageCredits);
             notesContainer = findViewById(R.id.notesContainer);
             Button saveButton = findViewById(R.id.saveButton);
             noteList = new ArrayList<>();
@@ -75,10 +75,10 @@ public class JournalActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            settings.setOnClickListener(new View.OnClickListener() {
+            credits.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(JournalActivity.this, SettingsActivity.class);
+                    Intent intent = new Intent(JournalActivity.this, CreditsActivity.class);
                     startActivity(intent);
                 }
             });
@@ -124,6 +124,10 @@ public class JournalActivity extends AppCompatActivity {
             Toast.makeText(this, "Saved successfully", Toast.LENGTH_SHORT).show();
             createNoteView(note);
             clearInputFields();
+        }
+        else if(title.isEmpty() && content.isEmpty())
+        {
+            Toast.makeText(this, "Entries cannot be blank", Toast.LENGTH_SHORT).show();
         }
     }
 

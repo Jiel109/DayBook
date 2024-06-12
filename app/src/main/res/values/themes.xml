@@ -6,11 +6,16 @@
     </style>
     <style name="Theme.DayBook" parent="Base.Theme.DayBook" />
     <style name="CalenderViewCustom" parent="Base.Theme.DayBook">
-        <item name="colorControlActivated">@color/black</item>
-        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
     </style>
     <style name="CalendarViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
         <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimaryInverse">@color/black</item>
+    </style>
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
     </style>
 </resources>
 

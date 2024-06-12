@@ -43,7 +43,7 @@ public class CalendarActivity extends AppCompatActivity {
             ImageButton journal = findViewById(R.id.imageEntry);
             ImageButton mood = findViewById(R.id.imageMood);
             ImageButton toDo = findViewById(R.id.imageToDo);
-            ImageButton settings = findViewById(R.id.imageSettings);
+            ImageButton credits = findViewById(R.id.imageCredits);
 
             calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
                 @Override
@@ -80,10 +80,10 @@ public class CalendarActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            settings.setOnClickListener(new View.OnClickListener() {
+            credits.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(CalendarActivity.this, SettingsActivity.class);
+                    Intent intent = new Intent(CalendarActivity.this, CreditsActivity.class);
                     startActivity(intent);
                 }
             });
