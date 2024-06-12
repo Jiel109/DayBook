@@ -11,7 +11,8 @@
     tools:context=".CalendarActivity">
 
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout3"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:layout_gravity="top"
@@ -25,28 +26,38 @@
 
         <ImageButton
             android:id="@+id/imageSettings"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginStart="340dp"
+            android:layout_width="97dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="189dp"
             android:layout_marginTop="7dp"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/settings" />
+            android:src="@drawable/settings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"  />
 
         <TextView
             android:id="@+id/textTitle"
-            android:layout_width="140dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="135dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginBottom="9dp"
             android:gravity="center"
-            android:text="DayBook"
+            android:text="Calendar"
             android:textAlignment="center"
             android:textColor="#272727"
             android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.794"
             tools:ignore="HardcodedText" />
 
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textViewSched"
@@ -136,7 +147,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="-70dp"
         android:background="#EDACAC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
