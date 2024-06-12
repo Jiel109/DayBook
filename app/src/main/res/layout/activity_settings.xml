@@ -61,5 +61,88 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/T1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="This is not really a setting"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/T2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Credits"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/T3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Leader"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/T4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Arleij Lopez"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/T5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Members"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/T6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Sergio Victoriano"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/T7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Gio Marasigan"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/T8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nangit"
+            android:textSize="20dp"
+            />
+
+        <Button
+            android:id="@+id/ClickMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Click Me"
+            android:backgroundTint="#663399"
+            />
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
