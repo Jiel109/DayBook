@@ -96,7 +96,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/buttonSave"
+        android:id="@+id/buttonConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
@@ -104,7 +104,7 @@
         android:layout_marginEnd="150dp"
         android:backgroundTint="#EDACAC"
         android:onClick="AddEvent"
-        android:text="Save"
+        android:text="Confirm"
         android:textColor="@color/white"
         app:cornerRadius="10dp"
         tools:ignore="HardcodedText" />
