@@ -10,148 +10,117 @@
     android:gravity="top"
     tools:context=".JournalActivity">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="60dp"
         android:layout_gravity="top"
-        android:background="#EDACAC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001">
+        android:background="#EDACAC">
 
         <ImageButton
             android:id="@+id/imageSettings"
-            android:layout_width="97dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="189dp"
-            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="10dp"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/settings"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            android:src="@drawable/settings" />
 
         <TextView
             android:id="@+id/textTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
-            android:text="My Journal"
+            android:text="DayBook"
             android:textAlignment="center"
             android:textColor="#272727"
             android:textSize="35sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.794"
             tools:ignore="HardcodedText" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/linearLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp"
         tools:context=".MainActivity">
-
 
         <EditText
             android:id="@+id/titleEditText"
-            android:layout_width="193dp"
-            android:layout_height="35dp"
+            android:layout_width="match_parent"
             android:background="@drawable/edittext_bg"
-            android:hint="Note Title"
+            android:layout_height="46dp"
             android:paddingLeft="10dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.206"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.026" />
+            android:hint="Note Title"/>
 
         <EditText
-            android:id="@+id/contentEditText"
-            android:layout_width="324dp"
-            android:layout_height="120dp"
-            android:background="@drawable/edittext_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Note Content"
-            android:inputType="textMultiLine"
-            android:minLines="5"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:background="@drawable/edittext_bg"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.517"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.116" />
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:id="@+id/contentEditText"/>
 
         <Button
             android:id="@+id/saveButton"
-            android:layout_width="130dp"
-            android:layout_height="44dp"
-            android:layout_marginEnd="63dp"
-            android:backgroundTint="#C18686"
-            android:text="Save Notes"
-            android:textColorLink="#DDAAAA"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.206"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.327" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Note"
+            android:textColor="@color/white"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="#EDACAC"
+            android:layout_marginTop="16dp"/>
 
         <TextView
-            android:id="@+id/notesTextView"
-            android:layout_width="326dp"
-            android:layout_height="34dp"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
             android:text="Notes:"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="16dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.427" />
+            android:id="@+id/notesTextView"/>
 
-        <LinearLayout
-            android:id="@+id/notesContainer"
-            android:layout_width="327dp"
-            android:layout_height="85dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.526" />
+        <ScrollView
+            android:id="@+id/notesScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/notesContainer"
+                android:orientation="vertical"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
     <FrameLayout
+        android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginTop="-70dp"
-        android:background="#EDACAC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.01">
+        android:layout_marginTop="1dp"
+        android:background="#EDACAC">
 
         <ImageView
             android:id="@+id/imageEntry"
@@ -200,6 +169,5 @@
             android:paddingTop="5dp"
             android:src="@drawable/calendar" />
     </FrameLayout>
-
 
 </LinearLayout>
