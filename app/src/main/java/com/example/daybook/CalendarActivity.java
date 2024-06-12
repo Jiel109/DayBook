@@ -92,16 +92,33 @@ public class CalendarActivity extends AppCompatActivity {
     }
 
     public void AddEvent(View view) {
+        String eventText = text.getText().toString().trim();
+        if (eventText.isEmpty()) {
+            Toast.makeText(this, "Event cannot be blank", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         ContentValues cv = new ContentValues();
         cv.put("Date", selectDate);
-        cv.put("Event", text.getText().toString());
+        cv.put("Event", eventText);
         int updateRows = sqLiteDatabase.update("EventCalendar", cv, "Date=?", new String[]{selectDate});
         if (updateRows == 0) {
             sqLiteDatabase.insert("EventCalendar", null, cv);
         }
-        Toast.makeText(this, "Saved successfully.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Saved successfully", Toast.LENGTH_SHORT).show();
         text.setText("");
         ReadEvent(view);
+    }
+
+    public void ClearEvent(View view) {
+        int deletedRows = sqLiteDatabase.delete("EventCalendar", "Date=?", new String[]{selectDate});
+        if (deletedRows > 0) {
+            Toast.makeText(this, "Event cleared successfully", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "No event to clear", Toast.LENGTH_SHORT).show();
+        }
+        textView.setText("");
+        text.setText("");
     }
 
     public void ReadEvent(View view) {

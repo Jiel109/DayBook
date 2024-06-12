@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="110dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="110dp"
         android:text="SCHEDULE"
         android:textAlignment="center"
@@ -95,19 +95,42 @@
         android:text=""
         tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/buttonConfirm"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="150dp"
-        android:backgroundTint="#EDACAC"
-        android:onClick="AddEvent"
-        android:text="Confirm"
-        android:textColor="@color/white"
-        app:cornerRadius="10dp"
-        tools:ignore="HardcodedText" />
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:backgroundTint="#EDACAC"
+            android:onClick="AddEvent"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:backgroundTint="#EDACAC"
+            android:onClick="ClearEvent"
+            android:text="Delete"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
