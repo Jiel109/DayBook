@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
@@ -120,7 +121,7 @@ public class JournalActivity extends AppCompatActivity {
 
             noteList.add(note);
             saveNotesToPreferences();
-
+            Toast.makeText(this, "Saved successfully", Toast.LENGTH_SHORT).show();
             createNoteView(note);
             clearInputFields();
         }
@@ -162,6 +163,7 @@ public class JournalActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 deleteNoteAndRefresh(note);
+                Toast.makeText(JournalActivity.this, "Deleted successfully", Toast.LENGTH_SHORT).show();
             }
         });
         builder.setNegativeButton("Cancel", null);
