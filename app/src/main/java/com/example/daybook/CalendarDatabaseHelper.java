@@ -14,6 +14,7 @@ public class CalendarDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("CREATE TABLE IF NOT EXISTS EventCalendar(Date TEXT, Event Text)");
 
     }
 
