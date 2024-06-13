@@ -2,11 +2,11 @@
     <string name="app_name">DayBook</string>
     <string name="mood_tracker">MoodTracker</string>
     <string-array name="moodOption">
-        <item> <font color="black"> ------ </font> </item>
-        <item> <font color="black"> Excited </font> </item>
-        <item> <font color="black"> Happy </font> </item>
-        <item> <font color="black"> Bored </font> </item>
-        <item> <font color="black"> Sad </font> </item>
-        <item> <font color="black"> Angry </font> </item>
+        <item> ------ </item>
+        <item> Excited </item>
+        <item> Happy </item>
+        <item> Bored </item>
+        <item> Sad </item>
+        <item> Angry </item>
     </string-array>
 </resources>

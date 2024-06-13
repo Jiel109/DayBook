@@ -125,6 +125,6 @@ public class MoodActivity extends AppCompatActivity {
 
     private void saveMood(String mood) {
         db.addMood(mood);
-        Toast.makeText(this, "Mood saved.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Mood saved", Toast.LENGTH_SHORT).show();
     }
 }

@@ -34,7 +34,7 @@
             android:layout_marginStart="125dp"
             android:layout_marginTop="5dp"
             android:gravity="center"
-            android:text="DayBook"
+            android:text="Events"
             android:textAlignment="center"
             android:textColor="#272727"
             android:textSize="35sp"
@@ -48,6 +48,7 @@
         android:layout_height="wrap_content"
         android:background="#EDACAC"
         android:layout_marginTop="30dp"
+        android:elevation="1dp"
         android:theme="@style/CalenderViewCustom"
         android:dateTextAppearance="@style/CalendarViewDateCustomText"
         android:weekDayTextAppearance="@style/CalendarViewDateCustomText"
@@ -76,6 +77,7 @@
         android:layout_marginEnd="100dp"
         android:ems="10"
         android:hint="Event Name "
+        android:textColor="@color/black"
         android:inputType="text"
         android:textColorHint="#BC7C7C7C"
         android:text=""
@@ -165,7 +167,7 @@
             android:layout_height="65dp"
             android:layout_marginStart="202dp"
             android:layout_marginTop="2dp"
-            android:background="@drawable/corners3"
+            android:background="@drawable/corners2"
             android:paddingTop="7dp"
             android:paddingBottom="7dp"
             android:src="@drawable/to_do" />
@@ -177,7 +179,7 @@
             android:layout_height="65dp"
             android:layout_marginStart="303dp"
             android:layout_marginTop="2dp"
-            android:background="@drawable/corners2"
+            android:background="@drawable/corners3"
             android:paddingTop="5dp"
             android:src="@drawable/calendar" />
     </FrameLayout>

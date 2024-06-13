@@ -33,7 +33,7 @@
             android:layout_marginStart="125dp"
             android:layout_marginTop="5dp"
             android:gravity="center"
-            android:text="DayBook"
+            android:text="Journal"
             android:textAlignment="center"
             android:textColor="#272727"
             android:textSize="35sp"
